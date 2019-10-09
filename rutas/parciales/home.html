@@ -1,0 +1,31 @@
+<h1>Home</h1>
+
+<p>Pasos para montar el sistema de Routing de AngularJS</p>
+<ol>
+    <li>Descargar e incluir en <b>index.html</b> la libreria <code>angular.route.js</code></li>
+    <li>Definir e incluir en <b>index.html</b>como funcionan las rutas <code>js/config.js</code></li>
+    <li>incluir en <b>index.html</b> la directiva <code> ng-view </code> para que cambie las vistas</li>
+</ol>
+
+
+<h3>Ejemplo Rutas</h3>
+<pre><code>
+
+        app.config( function( $routeProvider ){
+
+            $routeProvider
+              .when('/',{
+                  templateUrl: 'parciales/home.html'
+              })
+              .when('/alumnos',{
+                  templateUrl: 'parciales/alumnos.html'
+              })
+              .when('/profesores',{
+                  templateUrl: 'parciales/profesores.html'
+              })
+              .otherwise({
+                redirectTo: '/'
+              })
+          
+          })
+</code></pre>
