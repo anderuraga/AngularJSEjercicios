@@ -6,21 +6,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#!/">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!/profesores">Profesores</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!/componente1">Componente Boton dentro de HTML</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#!/componente2">Componente Boton sin html</a>
+          <li ng-click="cambiarActivo(ruta)" ng-repeat="ruta in rutas" class="nav-item" ng-class="(ruta.active)?'active':''">
+              <a class="nav-link" ng-href="{{ruta.url}}">{{ruta.nombre}}</a>
           </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!/creditos" >Creditos</a>
-        </li>
-      </ul>
+        </ul>
     </div>
   </nav>
