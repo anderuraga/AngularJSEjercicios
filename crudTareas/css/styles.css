@@ -1,0 +1,57 @@
+
+body{
+
+    background-image:  url("../images/background.jpg");
+    background-color: #B6F2E8;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.tachado{
+    text-decoration:line-through;
+    color: grey;
+}    
+
+.no-editable{
+    border:none;
+}
+
+.fa-trash-alt, .fa-pencil-alt{
+    color:grey;
+    float: right;
+}
+
+.fa-pencil-alt{    
+    margin-right: 20px;
+}
+
+.fa-trash-alt:hover{
+    color: red;
+}
+
+.fa-pencil-alt:hover{
+    color: teal;
+}    
+
+
+
+.fas:hover{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.eliminar-content{
+    position: relative;
+}
+
+.eliminar-content button{
+    padding: 5px;
+    position: absolute;
+    border:1px solid red;
+    right: -10px;
+    top: -50px;
+    background-color: #FFF;
+}

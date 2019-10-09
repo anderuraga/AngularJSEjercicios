@@ -1,0 +1,16 @@
+h1{
+    color: teal;
+}
+
+p.btn-like{
+    cursor: pointer;
+}
+p.btn-like:hover{
+    font-size: 1.4em;
+    color: red;
+}
+
+tr td img {
+    width:100px;
+
+}

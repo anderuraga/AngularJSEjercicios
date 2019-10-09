@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="componentesApp">
+<!-- directiva para decir que es un App de Angular -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- angular js -->
+    <script src="js/angular.min.js"></script>
+
+    <!-- nuestra app y componentes -->
+    <script src="js/app.js"></script>    
+    <script src="js/componente-saludar.js"></script>
+    <script src="js/phone-list.component.js"></script>
+    <!-- componente js + html -->
+    <script src="components/boton/componente-boton.js"></script>
+    <script src="components/calificacion/componente-calificacion.js"></script>
+
+    <!-- estilos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Ejercicio Componentes</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Ejercicio Componentes</h1>
+
+        <ol>
+          <li><a href="https://docs.angularjs.org/tutorial/step_03" target="_blank">Tutorial Oficial - Components</a></li>
+          <li><a href="https://docs.angularjs.org/guide/component" target="_blank">Documentación Oficial - Components</a></li>
+        </ol>
+
+
+        <p>Nuestro primer componente:</p>
+        <saludo-usuario></saludo-usuario>
+
+        <p>Nuestro segundo componente con template para el HTML</p>
+        <componente-boton></componente-boton>
+
+
+        <hr>
+
+        <h2>Calificaciones de Pepe</h2>
+        <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Tecnologia</th>
+                    <th scope="col">Nota</th>                  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">HTML</th>
+                    <td><componente-calificacion pnota="10"></componente-calificacion></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CSS</th>
+                    <td><componente-calificacion pnota="8"></componente-calificacion></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">JS</th>
+                    <td><componente-calificacion pnota="3"></componente-calificacion></td>
+                  </tr>
+                </tbody>
+              </table>
+            
+
+         <hr>
+         <h2>Listado Telefonos</h2>     
+         <phone-list></phone-list>
+
+
+    </main>  
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+</body>
+
+</html>

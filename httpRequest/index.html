@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="ejemplosApp">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>http-request</title>
+
+
+        <!-- Incluir Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="css/animate.css">
+
+        <!-- Incluir AngularJS -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <script src="js/app.js"></script>
+        
+    </head>    
+    <body>
+
+        <div class="container" ng-controller="mainCtrl">
+            
+            <h1>$HTTP Request</h1>
+            <h4>Data dinámica</h4>
+            <p>Debemos inyectar la varibale <code>$http</code> en el controlador</p>
+            <p>Acordaros que las peticiones son con Ajax y <b>Asincronas</b>, mirar trazas de consola.</p>
+            <p>Interesante usar las herramientas desarrollo de Chrome, la pestaña NETWORKS ( XHR )</p>
+            <hr>
+            
+            <div ng-hide="ocultar"  class="alert alert-primary" role="alert">
+              Cargando datos asincronamente.....
+            </div>
+            {{ profesores }}
+
+
+
+        </div><!-- fin del listadoCtrl -->
+
+    </body>
+</html>

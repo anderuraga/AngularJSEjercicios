@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="profesorApp">
+<!-- directiva para decir que es un App de Angular -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- angular js -->
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="container">
+
+      <div class="row">
+        <div class="col">
+        <h1>Profesor</h1>
+        <div ng-controller="profesorController as pc" >
+        
+
+            <h4>{{ profesor.nombre | uppercase }}</h4>
+            <hr>
+            
+            <div class="row">
+                
+                <!-- Div que contiene la imagen del profesor -->
+                <div class="col-sm-3">
+                    <section class="panel">
+                        <div class="panel-body" align="center">
+                            <img ng-src="{{ profesor.foto }}" class="rounded-circle" alt="" width="150px" height="150px">
+                        </div>
+                    </section>
+                </div>
+            
+                <!-- Div, donde se mostrará la bio del profesor -->
+                <div class="col-sm-9">
+                    <section class="panel">
+                        <div class="panel-body">
+                                {{ profesor.bio }}
+                            <br>
+                            <br>
+                            <strong>Edad:</strong> {{ profesor.edad }} años   
+                        </div>
+                    </section>
+                </div>
+
+                <button class="btn btn-primary" ng-click="editar()">Editar</button>
+
+            </div>
+            
+            <div class="row {{animacion}}" ng-show="esVisble">
+
+                Nombre: <br>
+                <input type="text" class="form-control" ng-model="editando.nombre">
+
+                Edad: <br>
+                <input type="text" class="form-control" ng-model="editando.edad">
+
+                Biografia: <br>
+                <textarea class="form-control mb-3" ng-model="editando.bio"></textarea>
+
+                <button class="btn btn-success mr-2" ng-click="guardar()">Guardar</button>
+                <button class="btn btn-danger" ng-click="cancelar()">Cancelar</button>
+                
+            </div>    
+
+        </div>
+        <!-- end profesorController -->
+
+        <hr>
+
+        <div ng-controller="videoController as vc" >
+            <h2>{{ video.nombre }}</h2>
+            <p class="btn-like {{animacion}}" ng-click="sumarLike()">
+                <i class="far fa-heart"></i> {{ video.likes }} Likes
+            </p>           
+            <iframe width="560" height="315" ng-src="{{url}}" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+            
+        </div>
+
+    </div>  
+    <!-- / 1º col --> 
+    
+
+    <div class="col" ng-controller="frutasController"> 
+        <h2>Ejemplo Directiva <b>ng-repeat</b></h2>
+
+       
+        Fruta Seleccionada: {{frutaSeleccionada}}
+        <ul class="list-group">
+            <li class="{{ (frutaSeleccionada == f) ? 'list-group-item active' : 'list-group-item' }}"                
+                ng-click="seleccionado(f)" 
+                ng-repeat="f in frutas">{{f}}</li>         
+        </ul>  
+        
+        {{ frutasJson }}
+
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="fj in frutasJson.frutas">
+                {{fj.nombre}} - {{ fj.color}}
+            </li>         
+        </ul>  
+
+    </div>
+    <!-- / 2º col --> 
+
+    </div>  
+    <!-- / row --> 
+    </main> 
+</body>
+
+</html>

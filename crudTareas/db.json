@@ -1,0 +1,41 @@
+{
+  "tareas": [
+    {
+      "completada": true,
+      "descripcion": "filtrar por completadas o No compleatdas",
+      "id": 14
+    },
+    {
+      "completada": true,
+      "descripcion": "entender lo que escribooooooooooo",
+      "id": 15
+    },
+    {
+      "completada": false,
+      "descripcion": "TODO boton cancelar",
+      "id": 16
+    },
+    {
+      "completada": false,
+      "descripcion": "poner bonito",
+      "id": 17
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

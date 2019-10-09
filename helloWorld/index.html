@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<!-- directiva para decir que es un App de Angular -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- angular js -->
+    <script src="js/angular.min.js"></script>
+
+    <!-- estilos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>{{ "Wellcome 2 Angular JS" | uppercase }}</h1>
+    <div class="container">
+
+        <h2>Filtros</h2>
+        <a href="https://docs.angularjs.org/api/ng/filter" target="_blank">Documentación</a>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="badge badge-primary">uppercase</span> {{ "uPpeRcaSe" | uppercase }}
+            </li>
+            <li class="list-group-item">
+                <span class="badge badge-primary">lowercase</span> {{ "MAYUSULAS" | lowercase }}
+            </li>
+            <li class="list-group-item">
+                <span class="badge badge-primary">date</span>{{ "20191003T00:00:00" | date : 'yyyy/MM/dd' }}
+            </li>
+        </ul>
+
+
+        <h2>Directiva ng-model</h2>
+        Su nombre: {{ nombre | uppercase }}
+        <br>
+        <input type="text" ng-model="nombre" placeholder="Dime tu nombre" class="form-control" >
+
+        <br>
+        Su pais {{ pais }}
+        <br>
+        <select ng-model="pais">
+            <option value="es">Egpaña</option>
+            <option value="eu">Euskadi</option>
+            <option value="eeuu">EEUU</option>
+        </select>
+
+        <br>
+        Tus Gustos: g1:{{ g1 }} g2:{{ g2 }} g3:{{ g3 }} g4:{{ g4 }}
+        <br>
+        <input type="checkbox" ng-model="g1"> Musica <br>
+        <input type="checkbox" ng-model="g2"> Surf <br>
+        <input type="checkbox" ng-model="g3"> Bromas <br>
+        <input type="checkbox" ng-model="g4"> Caidas <br>
+
+    </div>
+</body>
+
+</html>
