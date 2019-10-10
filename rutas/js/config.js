@@ -1,4 +1,8 @@
 
+/**
+ * Configuracion de las rutas de la App
+ * @see components/menu/
+ */
 app.config( function( $routeProvider ){
 
   $routeProvider
@@ -7,7 +11,7 @@ app.config( function( $routeProvider ){
     })
     .when('/componente1',{
         templateUrl: 'parciales/componente.html'
-    })
+    })    
     .when('/componente2',{
       template: '<componente-boton></componente-boton>'
     })
