@@ -19,6 +19,7 @@
         <!-- Librerias AngularJS 1.7.8 -->
         <script src="js/lib/angular.1.7.8.min.js"></script>
         <script src="js/lib/angular-route.1.7.8.min.js"></script>
+        <script src="js/lib/angular-sanitize.min.js"></script>
 
         <!-- Nuestros JavaSctipt para la App -->
         <script src="js/app.js"></script>
@@ -30,18 +31,20 @@
         <!-- Nuestros Componentes -->
         <script src="components/menu/componente.menu.js"></script>
         <script src="components/boton/componente-boton.js"></script>
+        <script src="components/alert/componente-alert.js"></script>
 
 
 
     </head>
     <body>
 
-        <!--
-        <div ng-include="menuSuperior"></div>
-        -->
+   
 
         <componente-menu></componente-menu>
 
+        {{alerta}}
+
+        <componente-alert clase="{{alerta.clase}}" texto="{{alerta.texto}}"></componente-alert>
 
 
         <div class="container">
