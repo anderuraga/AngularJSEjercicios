@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li ng-click="cambiarActivo(ruta)" ng-repeat="ruta in rutas" class="nav-item" ng-class="(ruta.active)?'active':''">
-                <a class="nav-link" ng-href="{{ruta.url}}">{{ruta.nombre}}</a>
+                <a class="nav-link" ng-href="{{ruta.url}}"><i class="{{ruta.icono}}"></i> {{ruta.nombre}}</a>
             </li>
         </ul>
     </div>

@@ -10,22 +10,26 @@ angular.
         {
           "nombre": "Inicio",
           "url": "#!/",
-          "active": false
+          "active": false,
+          "icono": "fas fa-home"
         },
         {
           "nombre": "Frutas",
           "url": "#!/frutas",
-          "active": true
+          "active": true,
+          "icono": "fas fa-carrot"
         },
         {
           "nombre": "Componentes",
           "url": "#!/componente1",
-          "active": false
+          "active": false,
+          "icono": "fas fa-window-restore"
         },       
         {
           "nombre": "Creditos",
           "url": "#!/creditos",
-          "active": false
+          "active": false,
+          "icono": "fab fa-creative-commons"
         }
       ];
       
