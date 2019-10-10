@@ -15,8 +15,8 @@ app.config( function( $routeProvider ){
     .when('/componente2',{
       template: '<componente-boton></componente-boton>'
     })
-    .when('/profesores',{
-        templateUrl: 'parciales/profesores.html'
+    .when('/frutas',{
+        templateUrl: 'parciales/frutas.html'
     })
     .when('/creditos',{
       templateUrl: 'parciales/creditos.html'
