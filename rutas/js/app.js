@@ -5,7 +5,12 @@ app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
   this.$onInit = function(){
 
     console.log('onInit mainCtrl');
-    $scope.alerta = {};
+    
+    $scope.alerta = {
+      "texto" : "Ongi Etorri",
+      "clase" : "primary"
+    };
+
 
     // check para saber si esta el servicio rest levantado
     let url = 'http://localhost:3000/frutas';
@@ -24,6 +29,7 @@ app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
           "clase" : "danger"
         };
     });
+
     
 
   }//onInit

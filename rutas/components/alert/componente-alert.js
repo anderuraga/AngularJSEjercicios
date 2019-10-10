@@ -9,19 +9,15 @@ angular.
     controller: function AlertController() {
 
       console.trace('AlertController');   
-      
-      $self = this;
-      $self.alerta = {};
-
+       
       this.$onInit = function() {
+        console.trace('AlertController onInit');              
+      }
 
-        console.trace('AlertController onInit');   
-        $self.alerta = {
-            "texto" : $self.texto,
-            "clase" : $self.clase
-          };
-    
-      }//onInit  
-    
-    }
+      this.$onChanges = function (changes) {
+          console.log('onChanges %o', changes);        
+      }  
+      
+
+    }//controller
   });
