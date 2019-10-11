@@ -21,6 +21,9 @@ app.config( function( $routeProvider ){
     .when('/creditos',{
       templateUrl: 'parciales/creditos.html'
     })
+    .when('/funcional',{
+      templateUrl: 'parciales/prog-funcional.html'
+    })
     .otherwise({
       redirectTo: '/'
     })

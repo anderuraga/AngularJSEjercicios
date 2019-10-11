@@ -30,6 +30,12 @@ angular.
           "url": "#!/creditos",
           "active": false,
           "icono": "fab fa-creative-commons"
+        },       
+        {
+          "nombre": "Prg. Funcional",
+          "url": "#!/funcional",
+          "active": false,
+          "icono": "fab fa-creative-commons"
         }
       ];
       
