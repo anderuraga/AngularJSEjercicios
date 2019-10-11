@@ -18,10 +18,8 @@ angular.
           
             console.trace('llamda correcta %o', response);
             $scope.frutas = response.data;
-            $scope.colores = response.data.map( e => e.color);
-            $scope.nombre2e = response.data.filter( e=>e.precio > 1).map( e=> {
-               return {"nombre": e.nombre, "precio": e.precio }
-              });
+            //conseguir colores unicos del array
+            $scope.colores = response.data.map(e=>e.color).filter((v,i,a)=>a.indexOf(v)===i);           
             $scope.totalEuros = response.data.map(e=>e.precio).reduce( (pv,cv)=> pv+cv );
         }).catch(function (response) {
              console.warn('ERROR llamda %o', response);

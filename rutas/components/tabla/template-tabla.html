@@ -3,13 +3,11 @@
     {{frutas}}
     <br>
     COLORES: {{colores}}
-    <br>
-    FRUTAS precio > 2€ y solo nombre: {{ nombre2e  }}
+   
 
     <input type="text" ng-model="busqueda.nombre" placeholder="filtra por nombre" class="form-control">
     <select ng-model="busqueda.color" class="form-control">
-        <option value="verde">Verde</option>
-        <option value="marron">Marron</option>        
+        <option ng-repeat="c in colores" value="{{c}}">{{c}}</option>        
     </select>
     <table class="table">
         <thead>
