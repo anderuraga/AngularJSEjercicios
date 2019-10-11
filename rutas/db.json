@@ -1,5 +1,27 @@
 {
-  "frutas": [],
+  "frutas":[
+    {
+        "img":"https://supermercado.eroski.es/images/2388676.jpg",
+        "nombre":"Manzana",
+        "color": "verde",
+        "cantidad":1,
+        "precio":2.96
+    },
+    {   
+        "img":"https://supermercado.eroski.es/images/17210.jpg",
+        "nombre":"Pera",
+        "color": "verde",
+        "cantidad":1,
+        "precio":1.95
+    },
+    {   
+        "img":"https://supermercado.eroski.es/images/12063319.jpg",
+        "nombre":"Kiwi",
+        "color": "marron",
+        "cantidad":1,
+        "precio":1.93
+    }
+  ],
   "posts": [
     {
       "id": 1,
