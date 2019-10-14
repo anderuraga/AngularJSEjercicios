@@ -53,7 +53,7 @@ app.controller('promesasController', ['$scope', '$http', '$q', '$timeout',
     });
 
     // volvemos a llamar
-    $scope.p2 =   $scope.sumar( 5, 5 , false, 5000 );
+    $scope.p2 =   $scope.sumar( 5, 5 , false , 5000 );
     $scope.p2.then(function (result) {
         console.debug('promesa2 cumplida resultado %o', result);
         $scope.resultado2 = result;
@@ -69,8 +69,9 @@ app.controller('promesasController', ['$scope', '$http', '$q', '$timeout',
         console.debug("Todas las promesas completadas");
         $scope.resultadoTotal = $scope.resultado1 + $scope.resultado2;
 
-    }).catch(function (result) {
+    }).catch(function() {
         console.debug("fallo alguna promesa");
+        $scope.resultadoTotal = "fallo alguna promesa";
     });    
 
 

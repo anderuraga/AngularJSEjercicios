@@ -2,19 +2,16 @@
 
     <h2>{{titulo}}</h2>
 
-    <p> 2 + 3 = {{ resultado1 }} </p>
-    <p> 5 + 5 = {{ resultado2 }}</p>
-    <p>TOTAL sumas = {{ resultadoTotal }}</p>
+    <div class="border p-2">
+        <p> 2 + 3 = {{ resultado1 }} </p>
+        <p> 5 + 5 = {{ resultado2 }}</p>
+        <p>TOTAL sumas = {{ resultadoTotal }}</p>
+    </div>
+
+    <p>Cambiar alguna de las llamadas a las promesas para que falle</p>
+    <p><code>$scope.p2 =   $scope.sumar( 5, 5 , <b>true</b> , 5000 );</code></p>
 
     <p>Usamos <b>$q.all([arrayPromesas])</b> para esperar a todas</p>
-    <pre><code>
-            $q.all( [$scope.p1 , $scope.p2] ).then( function(){
-                console.debug("Todas las promesas completadas");
-                $scope.resultadoTotal = $scope.resultado1 + $scope.resultado2;
-        
-            }).catch(function (result) {
-                console.debug("fallo alguna promesa");
-            });    
-    </code></pre>
+  
 
 </div>
