@@ -26,17 +26,18 @@ angular.
           "icono": "fas fa-window-restore"
         },       
         {
+          "nombre": "Prg. Funcional",
+          "url": "#!/funcional",
+          "active": false,
+          "icono": "fas fa-filter"
+        },
+        {
           "nombre": "Creditos",
           "url": "#!/creditos",
           "active": false,
           "icono": "fab fa-creative-commons"
-        },       
-        {
-          "nombre": "Prg. Funcional",
-          "url": "#!/funcional",
-          "active": false,
-          "icono": "fab fa-creative-commons"
         }
+        
       ];
       
     
