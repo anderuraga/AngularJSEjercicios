@@ -3,7 +3,7 @@
     <h2>{{titulo}}</h2>
     <p>AngularJS tiene realmente 5 tipos distintos de servicios:</p>
     <ol>
-        <li>Costantes</li>
+        <li>Constantes</li>
         <li>Valores</li>
         <li>Servicios</li>
         <li>Factorias</li>
@@ -11,5 +11,39 @@
     </ol>
 
     <p>Los nombres de los servicios deben seguir la misma nomenclatura que los nombre de las variables. Es decir que la primera palabra debe ser en minúscula y el resto de palabras deben empezar en mayúscula <b>CamelCase</b>.</p>
+
+    <div class="card mb-3">
+        <div class="card-header">
+          Constantes <a class="float-right" target="_blank" href="https://www.cursoangularjs.es/doku.php?id=unidades:03_servicios:05_constant">Curso Angular JS</a>
+        </div>
+        <div class="card-body">         
+          <p class="card-text">Mirar <code>app.js</code> para ver como se define el servicio de constantes</p>
+          <p class="card-text">Para mostrar en el HTML crear una variable dentro del controlador <code>$scope.constantes = servicioConstantes;</code></p>          <pre><code>{{ constantes | json}}</code></pre>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header">
+          Values <a class="float-right" target="_blank" href="https://www.cursoangularjs.es/doku.php?id=unidades:03_servicios:06_value">Curso Angular JS</a>
+        </div>
+        <div class="card-body">         
+          <p class="card-text">Parecido a las Constates, pero con valores que podrian cambiar, pr ejemplo el valor de Euribor.</p>          
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header">
+          Service <a class="float-right" target="_blank" href="https://www.cursoangularjs.es/doku.php?id=unidades:03_servicios:07_service">Curso Angular JS</a>
+        </div>
+        <div class="card-body">         
+          <p class="card-text">Mirar <code>app.js</code> funcion <code>Rectangulo</code></p>            
+          <p class="card-text">Debemos usar una clase y no valores o constantes.</p>          
+          El area de un rectangulo de 2 * 3 = {{ area }}
+        </div>
+    </div>
+
+
+   
+
 
 </div>        

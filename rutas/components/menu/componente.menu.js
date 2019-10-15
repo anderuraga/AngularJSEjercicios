@@ -44,6 +44,12 @@ angular.
           "icono": "fas fa-server"
         },
         {
+          "nombre": "CRUD",
+          "url": "#!/crud",
+          "active": false,
+          "icono": "fas fa-music"
+        },
+        {
           "nombre": "Creditos",
           "url": "#!/creditos",
           "active": false,

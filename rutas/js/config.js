@@ -30,6 +30,9 @@ app.config( function( $routeProvider ){
     .when('/servicios',{
       templateUrl: 'parciales/servicios.html'
     })
+    .when('/crud',{
+      templateUrl: 'parciales/crud.html'
+    })
     .otherwise({
       redirectTo: '/'
     })
