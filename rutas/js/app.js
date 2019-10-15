@@ -1,11 +1,32 @@
 var app = angular.module('angularApp',['ngRoute','ngSanitize']);
 
-app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
+
+/**
+ * Servicio para Constantes
+ */
+
+ app.constant("servicioConstantes", {
+                                      "titulo": "AngularApp",
+                                      "idioma": "es-Es",
+                                      "version": "1.0",
+                                      "autor": "Ander Uraga",
+                                      "github": "https://github.com/anderuraga/AngularJSEjercicios"
+                                    } );
+
+
+/**
+ * Controlador Principal
+ */
+app.controller('mainCtrl', ['$scope','$http', 'servicioConstantes',
+                           function($scope,$http, servicioConstantes){
 
   this.$onInit = function(){
 
     console.log('onInit mainCtrl');
+    console.debug('constantes: %o', servicioConstantes);
     
+    $scope.constantes = servicioConstantes;
+
     $scope.alerta = {
       "texto" : "Ongi Etorri",
       "clase" : "primary"

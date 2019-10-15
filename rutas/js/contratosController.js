@@ -88,20 +88,18 @@ app.controller('contratosController', ['$scope', '$http', function($scope, $http
                 return accion;
 
             });
-        */
+
 
         //TODO por resolver
-       $scope.ejercicio4 = [...new Set( $scope.contratos.map( e => {
-           if (e.ACCIONES){
-            //return e.ACCIONES.titulo
-               
-            return e.ACCIONES.map( v => 
-                { 
-                    return  v.titulo 
-                });
-               
-        } 
-        }) )];
+       $scope.ejercicio4 =  $scope.contratos.map( e => {
+            if (e.ACCIONES){
+                return  [  ...new Set [ e.ACCIONES] ];
+            }else{
+                return  [ ...new Set[ {"titulo":"","clave":""} ]];
+            }
+          
+        }); 
+        */
 
 
             var test = [

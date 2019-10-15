@@ -38,6 +38,12 @@ angular.
           "icono": "fas fa-pray"
         },
         {
+          "nombre": "Servicios",
+          "url": "#!/servicios",
+          "active": false,
+          "icono": "fas fa-server"
+        },
+        {
           "nombre": "Creditos",
           "url": "#!/creditos",
           "active": false,
