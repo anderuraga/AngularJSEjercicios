@@ -6,28 +6,42 @@
 
      <h3>TODO</h3>
      <ol>
-         <li>Pintar datos en Tabla</li>
+         <li style="text-decoration: line-through">Pintar datos en Tabla</li>
          <li>Formulario para crear nuevas canciones</li>
          <li>Boton papelera para eliminar</li>
          <li>Poder Modificar una cancion</li>
          <li>Interesante para repaso Filtros y Ordenacion</li>
      </ol>
 
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>           
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="cancion in canciones">
+                        <th scope="row">{{cancion.id}}</th>
+                        <td>{{cancion.nombre}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- /columna 1 -->
 
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre</th>           
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="col">
+
+              <input type="text" ng-model="nombre" placeholder="Nombre Cancion">  
+              <button class="btn btn-primary" ng-click="nuevaCancion(nombre)" >Nueva</button>
+
+        </div>
+        <!-- /columna 2 -->
+    </div>
+
+   
           
        
 

@@ -3,9 +3,6 @@ function CancionProvider($http){
     console.log('CancionProvider');
     const ENDPOINT = "http://localhost:8080/cancion/";
   
-    this.$get = function(){
-        
-    }
 
     this.listar = function(){    
       console.log('cancionProvider listar ' + ENDPOINT);
@@ -29,6 +26,8 @@ function CancionProvider($http){
     this.crear = function( nombreCancion ){    
       let url = ENDPOINT;
       console.log('cancionProvider nombreCancion ' + url);
+      let body = { "id": 0, "nombre": nombreCancion };
+      return $http.post(url, body);
       
     }// crear
   

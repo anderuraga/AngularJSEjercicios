@@ -1,5 +1,5 @@
-app.controller('crudController', ['$scope', '$http', 'cancionProvider', 
-                                 function($scope, $http, cancionProvider){
+app.controller('crudController', ['$scope', 'cancionProvider', 
+                                 function($scope, cancionProvider){
 
 
     console.trace('crudController');
@@ -33,12 +33,31 @@ app.controller('crudController', ['$scope', '$http', 'cancionProvider',
             }
         );
 
-
-
     };    
+    // init
 
 
     // funciones
-  
+    ///////////////////////////////////////////////////////////////////////////
+
+    $scope.nuevaCancion = ( nombre ) => {
+
+        console.trace('click nuevaCancion nombre %s', nombre);
+        //TODO validacion
+
+        let p = cancionProvider.crear( nombre);
+        p.then(
+            (response)=>{
+                console.debug('llamada correcta %o', response);
+            },
+            (response)=>{
+                console.warn('llamada INcorrecta %o', response);
+            }
+        );
+
+
+
+    }
+    //nuevaCancion
 
 }]);
