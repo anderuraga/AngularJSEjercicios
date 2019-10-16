@@ -19,6 +19,7 @@ function CancionProvider($http){
     this.eliminar = function( idCancion ){    
       let url = ENDPOINT + idCancion;
       console.log('cancionProvider eliminar ' + url);
+      return $http.delete(url);
       
     }// eliminar
   
@@ -31,10 +32,10 @@ function CancionProvider($http){
       
     }// crear
   
-    this.modificar = function( idCancion, nombreCancion ){    
-      let url = ENDPOINT  + idCancion;
-      console.log('cancionProvider modificar %s  id=%s nombre=%s', url, idCancion, nombreCancion );
-      
+    this.modificar = function( cancion ){    
+      let url = ENDPOINT  + cancion.id;
+      console.log('cancionProvider modificar %s  %o ', url, cancion );
+      return $http.put( url, cancion);      
     }// modificar
   
   

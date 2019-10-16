@@ -1,31 +1,24 @@
 <div ng-controller="crudController" >
 
      <h2>{{titulo}}</h2>
-
-     {{ canciones | json }}
-
-     <h3>TODO</h3>
-     <ol>
-         <li style="text-decoration: line-through">Pintar datos en Tabla</li>
-         <li>Formulario para crear nuevas canciones</li>
-         <li>Boton papelera para eliminar</li>
-         <li>Poder Modificar una cancion</li>
-         <li>Interesante para repaso Filtros y Ordenacion</li>
-     </ol>
+     <h3 class="text-warning">{{mensaje}}</h3>
 
     <div class="row">
         <div class="col">
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre</th>           
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>           
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="cancion in canciones">
-                        <th scope="row">{{cancion.id}}</th>
+                        <td scope="row">{{cancion.id}}</td>
                         <td>{{cancion.nombre}}</td>
+                        <td><i class="fas fa-edit" ng-click="editar(cancion)"></i></td>
+                        <td><i class="fas fa-trash" ng-click="eliminar(cancion)"></i></td>
                     </tr>
                 </tbody>
             </table>
@@ -35,7 +28,15 @@
         <div class="col">
 
               <input type="text" ng-model="nombre" placeholder="Nombre Cancion">  
-              <button class="btn btn-primary" ng-click="nuevaCancion(nombre)" >Nueva</button>
+              <button class="btn btn-primary" ng-click="nuevaCancion(nombre)" ng-disabled="nombre.length<3" >Guardar</button>
+              <p ng-hide="nombre.length>=3">Escribe por lo menos 3 caracteres</p>
+
+            <hr>
+               
+              <input type="text" ng-model="cancionEditar.id">  
+              <input type="text" ng-model="cancionEditar.nombre">  
+              <button class="btn btn-primary" ng-click="guardar()" ng-disabled="cancionEditar.nombre.length<3" >Guardar</button>
+              <p ng-hide="cancionEditar.nombre.length>=3">Escribe por lo menos 3 caracteres</p>
 
         </div>
         <!-- /columna 2 -->
