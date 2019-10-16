@@ -10,6 +10,7 @@ var app = angular.module('angularApp',['ngRoute','ngSanitize']);
                                       "idioma": "es-Es",
                                       "version": "1.0",
                                       "autor": "Ander Uraga",
+                                      "email": "auraga@ipartek.com",
                                       "github": "https://github.com/anderuraga/AngularJSEjercicios"
                                     } );
 

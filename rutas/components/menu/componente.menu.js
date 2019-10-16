@@ -44,6 +44,12 @@ angular.
           "icono": "fas fa-server"
         },
         {
+          "nombre": "Formulario",
+          "url": "#!/formulario",
+          "active": false,
+          "icono": "fab fa-wpforms"
+        },
+        {
           "nombre": "CRUD",
           "url": "#!/crud",
           "active": false,

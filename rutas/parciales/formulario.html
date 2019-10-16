@@ -1,0 +1,47 @@
+<div ng-controller="formularioController" >
+
+     <h2>{{titulo}}</h2>
+
+     <div class="row">
+         <div class="col">
+
+            <form name="formulario" ng-submit="postear()" novalidate>
+
+                <div class="form-group">
+                    {{ formulario.email | json }}
+                    <label>Email*</label>
+                    <input type="email" 
+                           name="email"
+                           ng-model="fomulario.email"
+                           class="form-control" 
+                           required
+                           placeholder="Enter email">
+                    <small class="form-text text-muted">validacion</small>
+                </div>
+
+                <div class="form-group">                   
+                    <label>Nombre*</label>                   
+                    <input type="text" ng-model="fomulario.nombre" 
+                           name="nombre"
+                           class="form-control" 
+                           required
+                           minlength="2"
+                           maxlength="50"
+                           placeholder="Tu Nombre">
+                </div>
+
+                <button type="submit" 
+                        ng-disabled="formulario.$invalid"
+                        class="btn btn-primary">Guardar</button> 
+
+            </form>
+
+         </div>
+         <div class="col border p-1 bg-light">                
+            <pre><code>{{ formulario | json }}</code></pre>
+         </div>
+     </div>
+     
+       
+
+</div>
