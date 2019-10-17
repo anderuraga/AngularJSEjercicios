@@ -22,3 +22,14 @@ img.zoom{
   width: 100%;
 }
 
+/*
+input:valid{
+  color: green;
+  border: 1px solid green;
+}
+
+input:invalid{
+  color: red;
+  border: 3px solid red;
+}
+*/

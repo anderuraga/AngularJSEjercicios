@@ -2,32 +2,43 @@
 
      <h2>{{titulo}}</h2>
 
+    <div class="border p-4 mb-3">
+        <p>En la etiqueta <code>form</code> dar un <code>name</code> al formulario </p>
+        <p>Crear un objeto en el controlador para los datos del formulario <code>$scope.formData = {};</code> </p>
+        <p>En cada <code>input</code> importante usar <code>name</code> y directiva <code>ngModel</code></p>
+    </div> 
+
+
      <div class="row">
          <div class="col">
 
             <form name="formulario" ng-submit="postear()" novalidate>
 
                 <div class="form-group">
-                    {{ formulario.email | json }}
+                    
                     <label>Email*</label>
                     <input type="email" 
                            name="email"
-                           ng-model="fomulario.email"
-                           class="form-control" 
+                           ng-model="formData.email"
+                           class="form-control {{ (formulario.email.$valid )?'is-valid':'is-invalid'}}" 
+                           ng-click="changeStiles(formulario)"
                            required
                            placeholder="Enter email">
-                    <small class="form-text text-muted">validacion</small>
+                    <small class="form-text text-muted">Es obligatorio que tenga formato de email</small>
                 </div>
 
-                <div class="form-group">                   
+                <div class="form-group">      
+                    <!-- <pre>{{ formulario.nombre | json }}   </pre>           -->
                     <label>Nombre*</label>                   
-                    <input type="text" ng-model="fomulario.nombre" 
+                    <input type="text" 
                            name="nombre"
-                           class="form-control" 
+                           ng-model="formData.nombre" 
+                           class="form-control {{ (formulario.nombre.$valid)?'is-valid':'is-invalid'}}" 
                            required
                            minlength="2"
                            maxlength="50"
                            placeholder="Tu Nombre">
+                    <small class="form-text text-muted">Minimo 2 maximo 50 caracteres</small>       
                 </div>
 
                 <button type="submit" 
