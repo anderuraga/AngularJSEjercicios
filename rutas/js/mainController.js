@@ -2,8 +2,8 @@
 /**
  * Controlador Principal
  */
-app.controller('mainCtrl', ['$scope','$http', 'servicioConstantes',
-                           function($scope,$http, servicioConstantes){
+app.controller('mainCtrl', ['$scope','$http', 'servicioConstantes','pokemonProvider',
+                           function($scope,$http, servicioConstantes, pokemonProvider){
 
   this.$onInit = function(){
 
@@ -11,12 +11,15 @@ app.controller('mainCtrl', ['$scope','$http', 'servicioConstantes',
     console.debug('constantes: %o', servicioConstantes);
     
     $scope.constantes = servicioConstantes;
-
+    
     $scope.alerta = {
       "texto" : "Ongi Etorri",
       "clase" : "primary"
     };
 
+    console.trace("pedimos a la API todos los pokemos");
+    $scope.pokemons = {};
+    pokemonProvider.listarPokemon().then( data => $scope.pokemons = data );
 
     // check para saber si esta el servicio rest levantado
     let url = 'http://localhost:3000/frutas';

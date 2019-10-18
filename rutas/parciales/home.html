@@ -44,3 +44,23 @@
     <li><a href="#!/detalle/3">Detalle Registro 3</a></li>
     <li><a href="#!/detalle/11">Detalle Registro 11</a></li>
 </ul>
+
+<h3>Pokemon</h3>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">nombre</th>
+        <th scope="col">weight</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="pokemon in pokemons">
+        <td>{{pokemon.id}}</td>
+        <td>{{pokemon.name}}</td>
+        <td>{{pokemon.weight}}</td>
+      </tr>
+    </tbody>
+</table>      

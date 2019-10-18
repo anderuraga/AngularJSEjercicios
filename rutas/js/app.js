@@ -19,6 +19,7 @@ var app = angular.module('angularApp',['ngRoute','ngSanitize']);
  */
 
  app.service("cancionProvider", CancionProvider );
+ app.service("pokemonProvider", pokemonProvider );
 
 
 /**
@@ -45,5 +46,20 @@ var app = angular.module('angularApp',['ngRoute','ngSanitize']);
 
 //definir Servicio
 app.service("rectanguloService",Rectangulo);
+
+
+
+//definir filtro en la app
+app.filter("capitalizar", function () {
+  return function ( cadena ){
+    if (cadena != undefined && typeof cadena == 'string'){      
+      return cadena.charAt(0).toUpperCase() + cadena.slice(1);      
+    }else{
+      return "";
+    }      
+  }
+});
+
+
 
 
